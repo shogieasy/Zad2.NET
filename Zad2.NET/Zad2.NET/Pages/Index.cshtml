@@ -4,7 +4,56 @@
     ViewData["Title"] = "Home page";
 }
 
+<style>
+    #odstep
+    {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome @Model.Name</h1>
+    <form method="post">
+        <br /><br />
+
+
+        <div class="row justify-content-md-center">
+
+            <div id="odstep">
+                <div class="column">
+                    <label asp-for="Address.Street"></label>
+                    <input asp-for="Address.Street" class="form-control" />
+                    <span asp-validation-for="Address.Street" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div id="odstep">
+                <div class="=column">
+                    <label asp-for="Address.Number"></label>
+                    <input asp-for="Address.Number" class="form-control" />
+                </div>
+            </div>
+            <div id="odstep">
+                <div class="=column">
+                    <label asp-for="Address.ZipCode"></label>
+                    <input asp-for="Address.ZipCode" class="form-control" />
+                </div>
+            </div>
+            <div id="odstep">
+                <div class="=column">
+                    <label asp-for="Address.City"></label>
+                    <input asp-for="Address.City" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+
+            <br /><br /><br />
+            <button type="submit" class="btn btn-primary">Zatwierdź</button><br />
+
+    </form>
+
+
 </div>
