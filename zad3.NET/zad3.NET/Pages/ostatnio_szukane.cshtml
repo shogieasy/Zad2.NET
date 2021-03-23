@@ -1,0 +1,18 @@
+﻿@page
+@model zad3.NET.Pages.ostatnio_szukaneModel
+@{
+}
+
+
+<p>Dane w zapisane w sesji</p>
+@if (Model.FizzBuzz != null)
+{
+    <p>
+        @Model.FizzBuzz.liczba
+    </p>
+
+    <p>
+        @Model.FizzBuzz.wynik
+    </p>
+    @* string date = Session["Date"] as string; *@
+}
