@@ -16,6 +16,7 @@ namespace zad3.NET
             CreateHostBuilder(args).Build().Run();
         }
 
+
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

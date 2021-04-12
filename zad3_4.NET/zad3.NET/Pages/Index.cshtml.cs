@@ -17,27 +17,32 @@ namespace zad3.NET.Pages
         private readonly ILogger<IndexModel> _logger;
 
         [BindProperty]
-        public FizzBuzz FizzBuzz { get; set; }
+        public FizzBuzz FizzBuzz {get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
         }
 
+        
         public void OnGet()
         {
         }
 
+
         public IActionResult OnPost()
         {
+             FizzBuzz.oblicz();
+
             if (ModelState.IsValid)
-            {
-               // Session["Date"] = DateTime.Now.ToString();
-                HttpContext.Session.SetString("SessionAddress", JsonConvert.SerializeObject(FizzBuzz));
-                return RedirectToPage("./ostatnio_szukane");
+           {
+        
+                  HttpContext.Session.SetString("SessionAddress", JsonConvert.SerializeObject(FizzBuzz));
+                //  return RedirectToPage("./ostatnio_szukane"); przechodzenie do zapisanych danych
             }
             return Page();
         }
+
 
 
     }

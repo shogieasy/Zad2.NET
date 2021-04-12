@@ -5,8 +5,11 @@
 
 
 <p>Dane w zapisane w sesji</p>
+
+
 @if (Model.FizzBuzz != null)
 {
+<table>
     <p>
         @Model.FizzBuzz.liczba
     </p>
@@ -14,5 +17,10 @@
     <p>
         @Model.FizzBuzz.wynik
     </p>
-    @* string date = Session["Date"] as string; *@
+
+    <p>
+        @Model.FizzBuzz.data
+    </p>
+</table>
 }
+
